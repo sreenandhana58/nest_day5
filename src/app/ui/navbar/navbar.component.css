@@ -1,0 +1,6 @@
+ul {
+    background-color: lavender;
+    list-style: none;
+    padding: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+<div class="container">
+
+    <h1 class="display-3 text-center">Todo List</h1>
+
+
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">status</th>
+                    <th scope="col">Todo</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(item of todo ; track item.id ){
+
+                <tr>
+                    <td>{{item.id}}</td>
+
+
+                    <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                            [checked]="item.completed"></td>
+
+                    <td [ngClass]="{redTodo: item.completed==true}"> {{item.todo}}</td>
+                    <td>
+
+                        <i class="bi bi-pen"></i> &nbsp; &nbsp;
+                        <i class="bi bi-archive"></i>
+
+                    </td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
